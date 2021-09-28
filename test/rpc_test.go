@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/Platdot-Network/substrate-go/client"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/rjman-ljm/go-substrate-crypto/ss58"
-	"github.com/rjman-ljm/substrate-go/client"
 )
 
 //const url = "wss://chainx.elara.patract.io"

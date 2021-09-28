@@ -1,4 +1,4 @@
-module github.com/rjman-ljm/substrate-go
+module github.com/Platdot-Network/substrate-go
 
 go 1.15
 

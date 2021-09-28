@@ -1,12 +1,13 @@
 package expand
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
-	"github.com/rjman-ljm/substrate-go/expand/bifrost"
-	"github.com/rjman-ljm/substrate-go/expand/chainx"
-	"github.com/rjman-ljm/substrate-go/expand/extra"
-	"github.com/rjman-ljm/substrate-go/expand/polkadot"
 	"strings"
+
+	"github.com/Platdot-Network/substrate-go/expand/bifrost"
+	"github.com/Platdot-Network/substrate-go/expand/chainx"
+	"github.com/Platdot-Network/substrate-go/expand/extra"
+	"github.com/Platdot-Network/substrate-go/expand/polkadot"
+	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 )
 
 type IEventRecords interface {
