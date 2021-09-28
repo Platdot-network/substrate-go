@@ -424,3 +424,9 @@ type EventUtilityItemCompleted struct {
 	Phase  gsrpcTypes.Phase
 	Topics []gsrpcTypes.Hash
 }
+
+type EventStakingChilled struct {
+	Phase  gsrpcTypes.Phase
+	Stash  gsrpcTypes.AccountID
+	Topics []gsrpcTypes.Hash
+}

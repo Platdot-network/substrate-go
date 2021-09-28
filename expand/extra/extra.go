@@ -80,15 +80,20 @@ type ExtraEventRecord struct {
 	Paras_NewHeadNoted         []NewHeadNoted
 	Paras_ActionQueued         []ActionQueued
 
-	ParasUmp_InvalidFormat          []InvalidFormat
-	ParasUmp_UnsupportedVersion     []UnsupportedVersion
-	ParasUmp_ExecutedUpward         []ExecutedUpward
-	ParasUmp_WeightExhausted        []WeightExhausted
-	ParasUmp_UpwardMessagesReceived []UpwardMessagesReceived
+	Ump_InvalidFormat          []InvalidFormat
+	Ump_UnsupportedVersion     []UnsupportedVersion
+	Ump_ExecutedUpward         []ExecutedUpward
+	Ump_WeightExhausted        []WeightExhausted
+	Ump_UpwardMessagesReceived []UpwardMessagesReceived
 
 	ParasHrmp_OpenChannelRequested []OpenChannelRequested
 	ParasHrmp_OpenChannelAccepted  []OpenChannelAccepted
 	ParasHrmp_ChannelClosed        []ChannelClosed
+
+	// Prevent name change
+	Hrmp_OpenChannelRequested []OpenChannelRequested
+	Hrmp_OpenChannelAccepted  []OpenChannelAccepted
+	Hrmp_ChannelClosed        []ChannelClosed
 
 	Registrar_Registered   []Registered
 	Registrar_Deregistered []Deregistered
@@ -96,4 +101,5 @@ type ExtraEventRecord struct {
 
 	// Update Origin
 	Utility_ItemCompleted []EventUtilityItemCompleted //nolint:stylecheck,golint
+	Staking_Chilled       []EventStakingChilled       //nolint:stylecheck,golint
 }
