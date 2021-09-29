@@ -430,3 +430,45 @@ type EventStakingChilled struct {
 	Stash  gsrpcTypes.AccountID
 	Topics []gsrpcTypes.Hash
 }
+
+type EventStakingPayoutStarted struct {
+	Phase    gsrpcTypes.Phase
+	EraIndex gsrpcTypes.U32
+	Stash    gsrpcTypes.AccountID
+	Topics   []gsrpcTypes.Hash
+}
+
+type EventStakingStakersElected struct {
+	Phase  gsrpcTypes.Phase
+	Topics []gsrpcTypes.Hash
+}
+
+// EventStakingSlash is emitted when one validator (and its nominators) has been slashed by the given amount
+type EventStakingSlashed struct {
+	Phase     gsrpcTypes.Phase
+	AccountID gsrpcTypes.AccountID
+	Balance   gsrpcTypes.U128
+	Topics    []gsrpcTypes.Hash
+}
+
+type EventStakingElectionFailed struct {
+	Phase  gsrpcTypes.Phase
+	Topics []gsrpcTypes.Hash
+}
+
+// EventStakingEraPaid is emitted when the era payout has been set;
+type EventStakingEraPaid struct {
+	Phase           gsrpcTypes.Phase
+	EraIndex        gsrpcTypes.U32
+	ValidatorPayout gsrpcTypes.U128
+	Remainder       gsrpcTypes.U128
+	Topics          []gsrpcTypes.Hash
+}
+
+// EventStakingReward is emitted when the staker has been rewarded by this amount.
+type EventStakingRewarded struct {
+	Phase  gsrpcTypes.Phase
+	Stash  gsrpcTypes.AccountID
+	Amount gsrpcTypes.U128
+	Topics []gsrpcTypes.Hash
+}

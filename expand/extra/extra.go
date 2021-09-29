@@ -100,6 +100,12 @@ type ExtraEventRecord struct {
 	Registrar_Reserved     []ParaReserved
 
 	// Update Origin
-	Utility_ItemCompleted []EventUtilityItemCompleted //nolint:stylecheck,golint
-	Staking_Chilled       []EventStakingChilled       //nolint:stylecheck,golint
+	Utility_ItemCompleted         []EventUtilityItemCompleted //nolint:stylecheck,golint
+	Staking_StakersElected        []EventStakingStakersElected
+	Staking_Slashed               []EventStakingSlashed
+	Staking_StakingElectionFailed []EventStakingElectionFailed
+	Staking_Chilled               []EventStakingChilled //nolint:stylecheck,golint
+	Staking_PayoutStarted         []EventStakingPayoutStarted
+	Staking_EraPaid               []EventStakingEraPaid
+	Staking_Rewarded              []EventStakingRewarded
 }
