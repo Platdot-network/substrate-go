@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/rjman-ljm/go-substrate-crypto/ss58"
 	"github.com/Platdot-Network/substrate-go/expand"
 	"github.com/Platdot-Network/substrate-go/expand/base"
 	"github.com/Platdot-Network/substrate-go/expand/chainx/xevents"
@@ -18,6 +17,7 @@ import (
 	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
 	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 	log2 "github.com/ethereum/go-ethereum/log"
+	"github.com/rjman-ljm/go-substrate-crypto/ss58"
 	"golang.org/x/crypto/blake2b"
 	"log"
 	"strconv"
@@ -951,9 +951,10 @@ func (c *Client) GetAccountInfo(address string) (*types.AccountInfo, error) {
 	var ok bool
 	switch strings.ToLower(c.Name) {
 	// todo 目前这里先做硬编码先，后续在进行修改
-	case "polkadot":
+	case "kusama":
 		var accountInfoProviders expand.AccountInfoWithProviders
 		ok, err = c.Api.RPC.State.GetStorageLatest(storage, &accountInfoProviders)
+		fmt.Println(ok)
 		if err != nil || !ok {
 			return nil, fmt.Errorf("get account info error: %v\n", err)
 		}

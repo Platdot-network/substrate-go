@@ -2,21 +2,21 @@ package test
 
 import (
 	"fmt"
-	"github.com/rjman-ljm/go-substrate-crypto/crypto"
 	"github.com/Platdot-Network/substrate-go/client"
 	"github.com/Platdot-Network/substrate-go/expand"
 	"github.com/Platdot-Network/substrate-go/tx"
+	"github.com/rjman-ljm/go-substrate-crypto/crypto"
 	"testing"
 )
 
 func Test_Tx2(t *testing.T) {
 	// 1. 初始化rpc客户端
-	c, err := client.New("ws://127.0.0.1:8087")
+	c, err := client.New("ws://127.0.0.1:9944")
 	if err != nil {
 		t.Fatal(err)
 	}
 	//2. 如果某些链（例如：chainX)的地址的字节前面需要0xff,则下面这个值设置为false
-	expand.SetSerDeOptions(false)
+	//expand.SetSerDeOptions(false)
 	from := "5FNTYUQwxjrVE5zRRH1hKh6fZ72AosHB7ThVnNnq9Bv9BFjm"
 	to := "5FnCTkAtgLinh6apZJwTX7n72H1A37MHE6xAXChZDbtUWMSg"
 	amount := uint64(10000000000)

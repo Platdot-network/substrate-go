@@ -34,7 +34,9 @@ func NewMetadataExpand(meta *types.Metadata) (*MetadataExpand, error) {
 		me.MV = newV12(meta.AsMetadataV12.Modules)
 	} else if meta.IsMetadataV13 {
 		me.MV = newV13(meta.AsMetadataV13.Modules)
-	} else {
+	} else if meta.IsMetadataV14 {
+		me.MV = newV14(meta.AsMetadataV14.Pallets)
+	} else{
 		return nil, errors.New("metadata version is not v11 or v12")
 	}
 	return me, nil
@@ -284,6 +286,85 @@ func (v v13) GetConstants(modName, constantsName string) (constantsType string, 
 			}
 		}
 	}
+	return "", nil, fmt.Errorf("do not find this constants,moduleName=%s,"+
+		"constantsName=%s", modName, constantsName)
+}
+
+type v14 struct {
+	module []types.PalletMetadataV14
+}
+func newV14(module []types.PalletMetadataV14) *v14 {
+	v := new(v14)
+	v.module = module
+	return v
+}
+
+func (v v14) FindNameByCallIndex(callIdx string) (moduleName, fn string, err error) {
+	//if len(callIdx) != 4 {
+	//	return "", "", fmt.Errorf("call index length is not equal 4: length: %d", len(callIdx))
+	//}
+	//data, err := hex.DecodeString(callIdx)
+	//if err != nil {
+	//	return "", "", fmt.Errorf("call index is not hex string")
+	//}
+	//for _, mod := range v.module {
+	//	if !mod.HasCalls {
+	//		continue
+	//	}
+	//	if mod.Index == data[0] {
+	//		for j, call := range mod.Calls {
+	//			if j == int(data[1]) {
+	//				moduleName = string(mod.Name)
+	//				fn = string(call.Name)
+	//				return
+	//			}
+	//		}
+	//	}
+	//}
+	return "", "", fmt.Errorf("do not find this callInx info: %s", callIdx)
+}
+
+func (v v14) GetCallIndex(moduleName, fn string) (callIdx string, err error) {
+	//避免指针为空
+	//defer func() {
+	//	if errs := recover(); errs != nil {
+	//		callIdx = ""
+	//		err = fmt.Errorf("catch panic ,err=%v\n", errs)
+	//	}
+	//}()
+	//for _, mod := range v.module {
+	//	if !mod.HasCalls {
+	//		continue
+	//	}
+	//	if string(mod.Name) != moduleName {
+	//
+	//		continue
+	//	}
+	//	for ci, f := range mod.Calls {
+	//		if string(f.Name) == fn {
+	//			return xstrings.RightJustify(utils.IntToHex(mod.Index), 2, "0") + xstrings.RightJustify(utils.IntToHex(ci), 2, "0"), nil
+	//		}
+	//	}
+	//}
+	return "", fmt.Errorf("do not find this call index")
+}
+func (v v14) GetConstants(modName, constantsName string) (constantsType string, constantsValue []byte, err error) {
+	//defer func() {
+	//	if errs := recover(); errs != nil {
+	//		err = fmt.Errorf("catch panic ,err=%v\n", errs)
+	//	}
+	//}()
+	//for _, mod := range v.module {
+	//	if modName == string(mod.Name) {
+	//		for _, constants := range mod.Constants {
+	//			if string(constants.Name) == constantsName {
+	//				constantsType = string(constants.Type)
+	//				constantsValue = constants.Value
+	//				return constantsType, constantsValue, nil
+	//			}
+	//		}
+	//	}
+	//}
 	return "", nil, fmt.Errorf("do not find this constants,moduleName=%s,"+
 		"constantsName=%s", modName, constantsName)
 }
