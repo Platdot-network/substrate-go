@@ -3,10 +3,10 @@ package expand
 import (
 	"fmt"
 
+	"github.com/JFJun/go-substrate-rpc-client/v3/scale"
+	"github.com/JFJun/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/expand/chainx/xevents"
 	"github.com/Platdot-Network/substrate-go/utils"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 	"github.com/huandu/xstrings"
 )
 

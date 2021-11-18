@@ -3,11 +3,11 @@ package expand
 import (
 	"strings"
 
+	"github.com/JFJun/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/expand/bifrost"
 	"github.com/Platdot-Network/substrate-go/expand/chainx"
 	"github.com/Platdot-Network/substrate-go/expand/extra"
 	"github.com/Platdot-Network/substrate-go/expand/polkadot"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 )
 
 type IEventRecords interface {
@@ -80,4 +80,3 @@ func DecodeEventRecords(meta *types.Metadata, rawData string, chainName string) 
 
 	return ier, nil
 }
-

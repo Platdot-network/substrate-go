@@ -1,6 +1,6 @@
 package extra
 
-import gsrpcTypes "github.com/centrifuge/go-substrate-rpc-client/v3/types"
+import gsrpcTypes "github.com/JFJun/go-substrate-rpc-client/v3/types"
 
 ///centrifuge/v3/types/events.go expand from https://github.com/Phala-Network/go-substrate-rpc-client/blob/master/types/events.go
 

@@ -14,9 +14,10 @@ import (
 //const url = "ws://127.0.0.1:7087"
 // const url = "wss://kusama.elara.patract.io"
 
-const url = "wss://kusama.api.onfinality.io/public-ws"
+// const url = "wss://kusama.api.onfinality.io/public-ws"
 
 // const url = "wss://polkadot.elara.patract.io"
+const url = "wss://rpc.polkadot.io"
 
 // const url = "wss://polkadot.api.onfinality.io/public-ws"
 
@@ -24,12 +25,13 @@ const url = "wss://kusama.api.onfinality.io/public-ws"
 
 //const url = "wss://dot.supercube.pro/ws"
 //const url = "wss://chainx.supercube.pro/ws"
-//const url = "ws://localhost:9977"
+// const url = "ws://localhost:9944"
+
 //const url = "wss://supercube.pro/ws"
 
 //const startBlock = 5715297	/* polkadot.event.proxy_executed */
-const startBlock = 9421750
-const endBlock = 9421750
+const startBlock = 7467638
+const endBlock = 7467638
 
 func Test_GetBlockByNumber(t *testing.T) {
 	c, err := client.New(url)
