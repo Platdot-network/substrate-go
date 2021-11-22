@@ -4,6 +4,8 @@ go 1.15
 
 replace github.com/centrifuge/go-substrate-rpc-client/v3 v3.0.2 => github.com/chainx-org/go-substrate-rpc-client/v3 v3.1.1
 
+replace github.com/JFJun/go-substrate-rpc-client/v3 v3.0.5 => github.com/Platdot-network/go-substrate-rpc-client/v3 v3.0.6
+
 require (
 	github.com/JFJun/go-substrate-rpc-client/v3 v3.0.5
 	github.com/centrifuge/go-substrate-rpc-client/v3 v3.0.2

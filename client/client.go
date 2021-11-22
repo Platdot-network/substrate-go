@@ -6,26 +6,28 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	gsrc "github.com/JFJun/go-substrate-rpc-client/v3"
+	"log"
+	"strconv"
+	"strings"
+
+	gsrpc "github.com/JFJun/go-substrate-rpc-client/v3"
 	gsClient "github.com/JFJun/go-substrate-rpc-client/v3/client"
 	"github.com/JFJun/go-substrate-rpc-client/v3/rpc"
 	"github.com/JFJun/go-substrate-rpc-client/v3/scale"
 	"github.com/JFJun/go-substrate-rpc-client/v3/types"
+	log2 "github.com/ethereum/go-ethereum/log"
+	"github.com/rjman-ljm/go-substrate-crypto/ss58"
+	"golang.org/x/crypto/blake2b"
+
 	"github.com/Platdot-Network/substrate-go/expand"
 	"github.com/Platdot-Network/substrate-go/expand/base"
 	"github.com/Platdot-Network/substrate-go/expand/chainx/xevents"
 	"github.com/Platdot-Network/substrate-go/models"
 	"github.com/Platdot-Network/substrate-go/utils"
-	log2 "github.com/ethereum/go-ethereum/log"
-	"github.com/rjman-ljm/go-substrate-crypto/ss58"
-	"golang.org/x/crypto/blake2b"
-	"log"
-	"strconv"
-	"strings"
 )
 
 type Client struct {
-	Api                *gsrc.SubstrateAPI
+	Api                *gsrpc.SubstrateAPI
 	Meta               *types.Metadata
 	Prefix             []byte //币种的前缀
 	Name               string //链名字
@@ -41,7 +43,7 @@ func New(url string) (*Client, error) {
 	var err error
 
 	// 初始化rpc客户端
-	c.Api, err = gsrc.NewSubstrateAPI(url)
+	c.Api, err = gsrpc.NewSubstrateAPI(url)
 	//Api, err := gsrpc.NewSubstrateAPI(config.Default().RPCURL)
 	if err != nil {
 		return nil, err
@@ -55,7 +57,7 @@ func New(url string) (*Client, error) {
 	return c, nil
 }
 
-func (c *Client) reConnectWs() (*gsrc.SubstrateAPI, error) {
+func (c *Client) reConnectWs() (*gsrpc.SubstrateAPI, error) {
 	cl, err := gsClient.Connect(c.Url)
 	if err != nil {
 		return nil, err
@@ -64,7 +66,7 @@ func (c *Client) reConnectWs() (*gsrc.SubstrateAPI, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &gsrc.SubstrateAPI{
+	return &gsrpc.SubstrateAPI{
 		RPC:    newRPC,
 		Client: cl,
 	}, nil
@@ -943,7 +945,7 @@ func (c *Client) GetAccountInfo(address string) (*types.AccountInfo, error) {
 	if err != nil {
 		return nil, fmt.Errorf("ss58 decode address error: %v\n", err)
 	}
-	storage, err = types.CreateStorageKey(c.Meta, "System", "Account", pub, nil)
+	storage, err = types.CreateStorageKey(c.Meta, "System", "Account", pub)
 	if err != nil {
 		return nil, fmt.Errorf("create System.Account storage error: %v\n", err)
 	}
