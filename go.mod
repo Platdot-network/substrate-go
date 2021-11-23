@@ -2,7 +2,7 @@ module github.com/Platdot-Network/substrate-go
 
 go 1.15
 
-replace github.com/JFJun/go-substrate-rpc-client/v3 v3.0.5 => github.com/Platdot-network/go-substrate-rpc-client/v3 v3.0.6
+replace github.com/JFJun/go-substrate-rpc-client/v3 v3.0.5 => github.com/Platdot-Network/go-substrate-rpc-client/v3 v3.0.8
 
 require (
 	github.com/JFJun/go-substrate-rpc-client/v3 v3.0.5
