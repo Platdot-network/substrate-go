@@ -1,7 +1,7 @@
 package bridge
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	events "github.com/hacpy/chainbridge-substrate-events"
 )
 
@@ -39,4 +39,3 @@ type AssetEvents struct {
 	Registry_RegistryCreated         []EventRegistryRegistryCreated        //nolint:stylecheck,golint
 	Registry_RegistryTmp             []EventRegistryTmp                    //nolint:stylecheck,golint
 }
-

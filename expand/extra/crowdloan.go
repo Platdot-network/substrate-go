@@ -1,8 +1,8 @@
 package extra
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
-	gsrpcTypes "github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	gsrpcTypes "github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 )
 
 /// Crowdloan

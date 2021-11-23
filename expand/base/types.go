@@ -4,9 +4,9 @@ import (
 	"encoding/hex"
 	"fmt"
 
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/expand/extra"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 )
 
 /// Polkadot MultiSignExtrinsic Type

@@ -8,17 +8,17 @@ import (
 	"io"
 	"reflect"
 
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/uint128"
 	"github.com/Platdot-Network/substrate-go/utils"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 	"github.com/huandu/xstrings"
 	"github.com/shopspring/decimal"
 )
 
-const(
+const (
 	ClientNameChainXAsset = "chainx_asset"
-	ClientNameChainX = "chainx"
+	ClientNameChainX      = "chainx"
 )
 
 const OriginAssetId = 0

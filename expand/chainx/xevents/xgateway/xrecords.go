@@ -1,7 +1,7 @@
 package xgateway
 
 import (
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 )
 
 /// XGatewayRecords Type

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/utils"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
 	"github.com/huandu/xstrings"
 )
 
@@ -28,6 +28,10 @@ type iMetaVersion interface {
 func NewMetadataExpand(meta *types.Metadata) (*MetadataExpand, error) {
 	me := new(MetadataExpand)
 	me.meta = meta
+	if meta.Version >= 14 {
+		me.MV = newV14UpGrade(meta)
+		return me, nil
+	}
 	if meta.IsMetadataV11 {
 		me.MV = newV11(meta.AsMetadataV11.Modules)
 	} else if meta.IsMetadataV12 {
@@ -206,7 +210,6 @@ func (v v12) GetConstants(modName, constantsName string) (constantsType string, 
 		"constantsName=%s", modName, constantsName)
 }
 
-
 type v13 struct {
 	module []types.ModuleMetadataV13
 }
@@ -286,6 +289,28 @@ func (v v13) GetConstants(modName, constantsName string) (constantsType string, 
 	}
 	return "", nil, fmt.Errorf("do not find this constants,moduleName=%s,"+
 		"constantsName=%s", modName, constantsName)
+}
+
+type v14Upgrade struct {
+	meta *types.Metadata
+}
+
+func newV14UpGrade(meta *types.Metadata) *v14Upgrade {
+	v := new(v14Upgrade)
+	v.meta = meta
+	return v
+}
+
+func (v v14Upgrade) GetCallIndex(moduleName, fn string) (callIdx string, err error) {
+	return v.meta.GetCallIndex(moduleName, fn)
+}
+
+func (v v14Upgrade) FindNameByCallIndex(callIdx string) (moduleName, fn string, err error) {
+	return v.meta.FindNameByCallIndex(callIdx)
+}
+
+func (v v14Upgrade) GetConstants(modName, constantsName string) (constantsType string, constantsValue []byte, err error) {
+	return v.meta.GetConstants(modName, constantsName)
 }
 
 /*

@@ -8,11 +8,12 @@ package expand
 import (
 	"fmt"
 
-	"github.com/Platdot-Network/substrate-go/utils"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/scale"
-	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/huandu/xstrings"
+
+	"github.com/Platdot-Network/substrate-go/utils"
 )
 
 type ExtrinsicDecoder struct {
@@ -770,7 +771,7 @@ func (ed *ExtrinsicDecoder) checkChainX(chainName string) bool {
 	if err == nil {
 		isChainX = true
 	}
-	if isChainX || chainName == ClientNameChainX  || chainName == ClientNameChainXAsset {
+	if isChainX || chainName == ClientNameChainX || chainName == ClientNameChainXAsset {
 		return true
 	} else {
 		return false

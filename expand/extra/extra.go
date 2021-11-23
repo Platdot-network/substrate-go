@@ -1,6 +1,8 @@
 package extra
 
-import gsrpcTypes "github.com/centrifuge/go-substrate-rpc-client/v3/types"
+import (
+	gsrpcTypes "github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
+)
 
 type ExtraEvents struct {
 	ExtraEventRecord
@@ -9,7 +11,6 @@ type ExtraEvents struct {
 
 type ExtraEventRecord struct {
 	// Fix some events
-	Balances_ReserveRepatriated []gsrpcTypes.EventBalancesReserveRepatriated
 	System_Remarked             []Remarked
 	Scheduler_Dispatched        []SchedulerDispatched
 	Scheduler_Scheduled         []SchedulerScheduled
@@ -58,13 +59,13 @@ type ExtraEventRecord struct {
 	RandomnessCollectiveFlip_MemberExecuted []MemberExecuted
 	RandomnessCollectiveFlip_Closed         []Closed
 
-	PhragmenElection_NewTerm           []gsrpcTypes.EventElectionsNewTerm
-	PhragmenElection_EmptyTerm         []gsrpcTypes.EventElectionsEmptyTerm
-	PhragmenElection_ElectionError     []gsrpcTypes.EventElectionsElectionError
-	PhragmenElection_MemberKicked      []gsrpcTypes.EventElectionsMemberKicked
-	PhragmenElection_Renounced         []gsrpcTypes.EventElectionsRenounced
-	PhragmenElection_CandidateSlashed  []gsrpcTypes.EventElectionsCandidateSlashed
-	PhragmenElection_SeatHolderSlashed []gsrpcTypes.EventElectionsSeatHolderSlashed
+	PhragmenElection_NewTerm       []gsrpcTypes.EventElectionsNewTerm
+	PhragmenElection_EmptyTerm     []gsrpcTypes.EventElectionsEmptyTerm
+	PhragmenElection_ElectionError []gsrpcTypes.EventElectionsElectionError
+	PhragmenElection_MemberKicked  []gsrpcTypes.EventElectionsMemberKicked
+	//PhragmenElection_Renounced         []types2.EventElectionsRenounced
+	//PhragmenElection_CandidateSlashed  []types2.EventElectionsCandidateSlashed
+	//PhragmenElection_SeatHolderSlashed []types2.EventElectionsSeatHolderSlashed
 
 	Gilt_BidPlaced    []BidPlaced
 	Gilt_BidRetracted []BidRetracted
