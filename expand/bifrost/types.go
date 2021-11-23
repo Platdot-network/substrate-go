@@ -2,8 +2,8 @@ package bifrost
 
 import (
 	"fmt"
-	"github.com/JFJun/go-substrate-rpc-client/v3/scale"
-	"github.com/JFJun/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/expand/base"
 	"github.com/Platdot-Network/substrate-go/expand/bridge"
 )

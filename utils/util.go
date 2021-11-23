@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/JFJun/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/rjman-ljm/go-substrate-crypto/ss58"
 	"math/big"
 	"strings"

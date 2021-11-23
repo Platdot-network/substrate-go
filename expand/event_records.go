@@ -3,7 +3,7 @@ package expand
 import (
 	"strings"
 
-	"github.com/JFJun/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/Platdot-Network/substrate-go/expand/bifrost"
 	"github.com/Platdot-Network/substrate-go/expand/chainx"
 	"github.com/Platdot-Network/substrate-go/expand/extra"

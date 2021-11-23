@@ -1,7 +1,7 @@
 package extra
 
 import (
-	gsrpcTypes "github.com/JFJun/go-substrate-rpc-client/v3/types"
+	gsrpcTypes "github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 )
 
 type ExtraEvents struct {
@@ -60,10 +60,10 @@ type ExtraEventRecord struct {
 	RandomnessCollectiveFlip_MemberExecuted []MemberExecuted
 	RandomnessCollectiveFlip_Closed         []Closed
 
-	PhragmenElection_NewTerm           []gsrpcTypes.EventElectionsNewTerm
-	PhragmenElection_EmptyTerm         []gsrpcTypes.EventElectionsEmptyTerm
-	PhragmenElection_ElectionError     []gsrpcTypes.EventElectionsElectionError
-	PhragmenElection_MemberKicked      []gsrpcTypes.EventElectionsMemberKicked
+	PhragmenElection_NewTerm       []gsrpcTypes.EventElectionsNewTerm
+	PhragmenElection_EmptyTerm     []gsrpcTypes.EventElectionsEmptyTerm
+	PhragmenElection_ElectionError []gsrpcTypes.EventElectionsElectionError
+	PhragmenElection_MemberKicked  []gsrpcTypes.EventElectionsMemberKicked
 	//PhragmenElection_Renounced         []types2.EventElectionsRenounced
 	//PhragmenElection_CandidateSlashed  []types2.EventElectionsCandidateSlashed
 	//PhragmenElection_SeatHolderSlashed []types2.EventElectionsSeatHolderSlashed

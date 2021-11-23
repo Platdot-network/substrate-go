@@ -1,6 +1,6 @@
 package pallets
 
-import "github.com/JFJun/go-substrate-rpc-client/v3/types"
+import "github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 
 type AssetId types.U32
 type Balance types.U128

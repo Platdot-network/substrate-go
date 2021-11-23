@@ -8,8 +8,8 @@ package expand
 import (
 	"fmt"
 
-	"github.com/JFJun/go-substrate-rpc-client/v3/scale"
-	"github.com/JFJun/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/huandu/xstrings"
 

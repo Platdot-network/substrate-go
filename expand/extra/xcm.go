@@ -1,8 +1,8 @@
 package extra
 
 import (
-	"github.com/JFJun/go-substrate-rpc-client/v3/scale"
-	gsrpcTypes "github.com/JFJun/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/scale"
+	gsrpcTypes "github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 )
 
 // https://github.com/paritytech/polkadot/blob/master/xcm/src/v0/traits.rs#L25

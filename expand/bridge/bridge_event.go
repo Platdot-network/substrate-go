@@ -1,7 +1,7 @@
 package bridge
 
 import (
-	"github.com/JFJun/go-substrate-rpc-client/v3/types"
+	"github.com/Platdot-Network/go-substrate-rpc-client/v3/types"
 	events "github.com/hacpy/chainbridge-substrate-events"
 )
 
