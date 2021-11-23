@@ -2,7 +2,6 @@ package extra
 
 import (
 	gsrpcTypes "github.com/JFJun/go-substrate-rpc-client/v3/types"
-	types2 "github.com/centrifuge/go-substrate-rpc-client/v3/types"
 )
 
 type TempMemo struct {
@@ -45,30 +44,30 @@ type OriginEventRecord struct {
 	Staking_Bonded                     []gsrpcTypes.EventStakingBonded                     //nolint:stylecheck,golint
 	Staking_Unbonded                   []gsrpcTypes.EventStakingUnbonded                   //nolint:stylecheck,golint
 	Staking_Withdrawn                  []gsrpcTypes.EventStakingWithdrawn                  //nolint:stylecheck,golint
-	Staking_Kicked                     []types2.EventStakingKicked                         //nolint:stylecheck,golint
+	//Staking_Kicked                     []types2.EventStakingKicked                         //nolint:stylecheck,golint
 	System_ExtrinsicSuccess            []gsrpcTypes.EventSystemExtrinsicSuccess            //nolint:stylecheck,golint
 	//System_ExtrinsicFailed                          []gsrpcTypes.EventSystemExtrinsicFailed                  //nolint:stylecheck,golint
 	System_CodeUpdated                              []gsrpcTypes.EventSystemCodeUpdated                  //nolint:stylecheck,golint
 	System_NewAccount                               []gsrpcTypes.EventSystemNewAccount                   //nolint:stylecheck,golint
 	System_KilledAccount                            []gsrpcTypes.EventSystemKilledAccount                //nolint:stylecheck,golint
-	Assets_Created                                  []types2.EventAssetCreated                           //nolint:stylecheck,golint
+	//Assets_Created                                  []types2.EventAssetCreated                           //nolint:stylecheck,golint
 	Assets_Issued                                   []gsrpcTypes.EventAssetIssued                        //nolint:stylecheck,golint
 	Assets_Transferred                              []gsrpcTypes.EventAssetTransferred                   //nolint:stylecheck,golint
-	Assets_Burned                                   []types2.EventAssetBurned                            //nolint:stylecheck,golint
-	Assets_TeamChanged                              []types2.EventAssetTeamChanged                       //nolint:stylecheck,golint
-	Assets_OwnerChanged                             []types2.EventAssetOwnerChanged                      //nolint:stylecheck,golint
-	Assets_Frozen                                   []types2.EventAssetFrozen                            //nolint:stylecheck,golint
-	Assets_Thawed                                   []types2.EventAssetThawed                            //nolint:stylecheck,golint
-	Assets_AssetFrozen                              []types2.EventAssetAssetFrozen                       //nolint:stylecheck,golint
-	Assets_AssetThawed                              []types2.EventAssetAssetThawed                       //nolint:stylecheck,golint
+	//Assets_Burned                                   []types2.EventAssetBurned                            //nolint:stylecheck,golint
+	//Assets_TeamChanged                              []types2.EventAssetTeamChanged                       //nolint:stylecheck,golint
+	//Assets_OwnerChanged                             []types2.EventAssetOwnerChanged                      //nolint:stylecheck,golint
+	//Assets_Frozen                                   []types2.EventAssetFrozen                            //nolint:stylecheck,golint
+	//Assets_Thawed                                   []types2.EventAssetThawed                            //nolint:stylecheck,golint
+	//Assets_AssetFrozen                              []types2.EventAssetAssetFrozen                       //nolint:stylecheck,golint
+	//Assets_AssetThawed                              []types2.EventAssetAssetThawed                       //nolint:stylecheck,golint
 	Assets_Destroyed                                []gsrpcTypes.EventAssetDestroyed                     //nolint:stylecheck,golint
-	Assets_ForceCreated                             []types2.EventAssetForceCreated                      //nolint:stylecheck,golint
-	Assets_MetadataSet                              []types2.EventAssetMetadataSet                       //nolint:stylecheck,golint
-	Assets_MetadataCleared                          []types2.EventAssetMetadataCleared                   //nolint:stylecheck,golint
-	Assets_ApprovedTransfer                         []types2.EventAssetApprovedTransfer                  //nolint:stylecheck,golint
-	Assets_ApprovalCancelled                        []types2.EventAssetApprovalCancelled                 //nolint:stylecheck,golint
-	Assets_TransferredApproved                      []types2.EventAssetTransferredApproved               //nolint:stylecheck,golint
-	Assets_AssetStatusChanged                       []types2.EventAssetAssetStatusChanged                //nolint:stylecheck,golint
+	//Assets_ForceCreated                             []types2.EventAssetForceCreated                      //nolint:stylecheck,golint
+	//Assets_MetadataSet                              []types2.EventAssetMetadataSet                       //nolint:stylecheck,golint
+	//Assets_MetadataCleared                          []types2.EventAssetMetadataCleared                   //nolint:stylecheck,golint
+	//Assets_ApprovedTransfer                         []types2.EventAssetApprovedTransfer                  //nolint:stylecheck,golint
+	//Assets_ApprovalCancelled                        []types2.EventAssetApprovalCancelled                 //nolint:stylecheck,golint
+	//Assets_TransferredApproved                      []types2.EventAssetTransferredApproved               //nolint:stylecheck,golint
+	//Assets_AssetStatusChanged                       []types2.EventAssetAssetStatusChanged                //nolint:stylecheck,golint
 	Democracy_Proposed                              []gsrpcTypes.EventDemocracyProposed                  //nolint:stylecheck,golint
 	Democracy_Tabled                                []gsrpcTypes.EventDemocracyTabled                    //nolint:stylecheck,golint
 	Democracy_ExternalTabled                        []gsrpcTypes.EventDemocracyExternalTabled            //nolint:stylecheck,golint
@@ -107,19 +106,19 @@ type OriginEventRecord struct {
 	TechnicalMembership_MembersReset                []gsrpcTypes.EventTechnicalMembershipMembersReset    //nolint:stylecheck,golint
 	TechnicalMembership_KeyChanged                  []gsrpcTypes.EventTechnicalMembershipKeyChanged      //nolint:stylecheck,golint
 	TechnicalMembership_Dummy                       []gsrpcTypes.EventTechnicalMembershipDummy           //nolint:stylecheck,golint
-	ElectionProviderMultiPhase_SolutionStored       []types2.EventElectionMultiPhaseSolutionStored       //nolint:stylecheck,golint
-	ElectionProviderMultiPhase_ElectionFinalized    []types2.EventElectionMultiPhaseElectionFinalized    //nolint:stylecheck,golint
-	ElectionProviderMultiPhase_Rewarded             []types2.EventElectionMultiPhaseRewarded             //nolint:stylecheck,golint
-	ElectionProviderMultiPhase_Slashed              []types2.EventElectionMultiPhaseSlashed              //nolint:stylecheck,golint
-	ElectionProviderMultiPhase_SignedPhaseStarted   []types2.EventElectionMultiPhaseSignedPhaseStarted   //nolint:stylecheck,golint
-	ElectionProviderMultiPhase_UnsignedPhaseStarted []types2.EventElectionMultiPhaseUnsignedPhaseStarted //nolint:stylecheck,golint
+	//ElectionProviderMultiPhase_SolutionStored       []types2.EventElectionMultiPhaseSolutionStored       //nolint:stylecheck,golint
+	//ElectionProviderMultiPhase_ElectionFinalized    []types2.EventElectionMultiPhaseElectionFinalized    //nolint:stylecheck,golint
+	//ElectionProviderMultiPhase_Rewarded             []types2.EventElectionMultiPhaseRewarded             //nolint:stylecheck,golint
+	//ElectionProviderMultiPhase_Slashed              []types2.EventElectionMultiPhaseSlashed              //nolint:stylecheck,golint
+	//ElectionProviderMultiPhase_SignedPhaseStarted   []types2.EventElectionMultiPhaseSignedPhaseStarted   //nolint:stylecheck,golint
+	//ElectionProviderMultiPhase_UnsignedPhaseStarted []types2.EventElectionMultiPhaseUnsignedPhaseStarted //nolint:stylecheck,golint
 	Elections_NewTerm                               []gsrpcTypes.EventElectionsNewTerm                   //nolint:stylecheck,golint
 	Elections_EmptyTerm                             []gsrpcTypes.EventElectionsEmptyTerm                 //nolint:stylecheck,golint
 	Elections_ElectionError                         []gsrpcTypes.EventElectionsElectionError             //nolint:stylecheck,golint
 	Elections_MemberKicked                          []gsrpcTypes.EventElectionsMemberKicked              //nolint:stylecheck,golint
-	Elections_Renounced                             []types2.EventElectionsRenounced                     //nolint:stylecheck,golint
-	Elections_CandidateSlashed                      []types2.EventElectionsCandidateSlashed              //nolint:stylecheck,golint
-	Elections_SeatHolderSlashed                     []types2.EventElectionsSeatHolderSlashed             //nolint:stylecheck,golint
+	//Elections_Renounced                             []types2.EventElectionsRenounced                     //nolint:stylecheck,golint
+	//Elections_CandidateSlashed                      []types2.EventElectionsCandidateSlashed              //nolint:stylecheck,golint
+	//Elections_SeatHolderSlashed                     []types2.EventElectionsSeatHolderSlashed             //nolint:stylecheck,golint
 	Identity_IdentitySet                            []gsrpcTypes.EventIdentitySet                        //nolint:stylecheck,golint
 	Identity_IdentityCleared                        []gsrpcTypes.EventIdentityCleared                    //nolint:stylecheck,golint
 	Identity_IdentityKilled                         []gsrpcTypes.EventIdentityKilled                     //nolint:stylecheck,golint
@@ -172,26 +171,26 @@ type OriginEventRecord struct {
 	Treasury_Burnt              []gsrpcTypes.EventTreasuryBurnt            //nolint:stylecheck,golint
 	Treasury_Rollover           []gsrpcTypes.EventTreasuryRollover         //nolint:stylecheck,golint
 	Treasury_Deposit            []gsrpcTypes.EventTreasuryDeposit          //nolint:stylecheck,golint
-	Tips_NewTip                 []types2.EventTipsNewTip                   //nolint:stylecheck,golint
-	Tips_TipClosing             []types2.EventTipsTipClosing               //nolint:stylecheck,golint
-	Tips_TipClosed              []types2.EventTipsTipClosed                //nolint:stylecheck,golint
-	Tips_TipRetracted           []types2.EventTipsTipRetracted             //nolint:stylecheck,golint
-	Tips_TipSlashed             []types2.EventTipsTipSlashed               //nolint:stylecheck,golint
-	Bounties_BountyProposed     []types2.EventBountyBountyProposed         //nolint:stylecheck,golint
-	Bounties_BountyRejected     []types2.EventBountyBountyRejected         //nolint:stylecheck,golint
-	Bounties_BountyBecameActive []types2.EventBountyBountyBecameActive     //nolint:stylecheck,golint
-	Bounties_BountyAwarded      []types2.EventBountyBountyAwarded          //nolint:stylecheck,golint
-	Bounties_BountyClaimed      []types2.EventBountyBountyClaimed          //nolint:stylecheck,golint
-	Bounties_BountyCanceled     []types2.EventBountyBountyCanceled         //nolint:stylecheck,golint
-	Bounties_BountyExtended     []types2.EventBountyBountyExtended         //nolint:stylecheck,golint
+	//Tips_NewTip                 []types2.EventTipsNewTip                   //nolint:stylecheck,golint
+	//Tips_TipClosing             []types2.EventTipsTipClosing               //nolint:stylecheck,golint
+	//Tips_TipClosed              []types2.EventTipsTipClosed                //nolint:stylecheck,golint
+	//Tips_TipRetracted           []types2.EventTipsTipRetracted             //nolint:stylecheck,golint
+	//Tips_TipSlashed             []types2.EventTipsTipSlashed               //nolint:stylecheck,golint
+	//Bounties_BountyProposed     []types2.EventBountyBountyProposed         //nolint:stylecheck,golint
+	//Bounties_BountyRejected     []types2.EventBountyBountyRejected         //nolint:stylecheck,golint
+	//Bounties_BountyBecameActive []types2.EventBountyBountyBecameActive     //nolint:stylecheck,golint
+	//Bounties_BountyAwarded      []types2.EventBountyBountyAwarded          //nolint:stylecheck,golint
+	//Bounties_BountyClaimed      []types2.EventBountyBountyClaimed          //nolint:stylecheck,golint
+	//Bounties_BountyCanceled     []types2.EventBountyBountyCanceled         //nolint:stylecheck,golint
+	//Bounties_BountyExtended     []types2.EventBountyBountyExtended         //nolint:stylecheck,golint
 	Contracts_Instantiated      []gsrpcTypes.EventContractsInstantiated    //nolint:stylecheck,golint
 	Contracts_Evicted           []gsrpcTypes.EventContractsEvicted         //nolint:stylecheck,golint
-	Contracts_Terminated        []types2.EventContractsTerminated          //nolint:stylecheck,golint
+	//Contracts_Terminated        []types2.EventContractsTerminated          //nolint:stylecheck,golint
 	Contracts_Restored          []gsrpcTypes.EventContractsRestored        //nolint:stylecheck,golint
 	Contracts_CodeStored        []gsrpcTypes.EventContractsCodeStored      //nolint:stylecheck,golint
 	Contracts_ScheduleUpdated   []gsrpcTypes.EventContractsScheduleUpdated //nolint:stylecheck,golint
-	Contracts_ContractEmitted   []types2.EventContractsContractEmitted     //nolint:stylecheck,golint
-	Contracts_CodeRemoved       []types2.EventContractsCodeRemoved         //nolint:stylecheck,golint
+	//Contracts_ContractEmitted   []types2.EventContractsContractEmitted     //nolint:stylecheck,golint
+	//Contracts_CodeRemoved       []types2.EventContractsCodeRemoved         //nolint:stylecheck,golint
 	Utility_BatchInterrupted    []gsrpcTypes.EventUtilityBatchInterrupted  //nolint:stylecheck,golint
 	Utility_BatchCompleted      []gsrpcTypes.EventUtilityBatchCompleted    //nolint:stylecheck,golint
 	Multisig_NewMultisig        []gsrpcTypes.EventMultisigNewMultisig      //nolint:stylecheck,golint

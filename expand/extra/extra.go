@@ -2,7 +2,6 @@ package extra
 
 import (
 	gsrpcTypes "github.com/JFJun/go-substrate-rpc-client/v3/types"
-	types2 "github.com/centrifuge/go-substrate-rpc-client/v3/types"
 )
 
 type ExtraEvents struct {
@@ -65,9 +64,9 @@ type ExtraEventRecord struct {
 	PhragmenElection_EmptyTerm         []gsrpcTypes.EventElectionsEmptyTerm
 	PhragmenElection_ElectionError     []gsrpcTypes.EventElectionsElectionError
 	PhragmenElection_MemberKicked      []gsrpcTypes.EventElectionsMemberKicked
-	PhragmenElection_Renounced         []types2.EventElectionsRenounced
-	PhragmenElection_CandidateSlashed  []types2.EventElectionsCandidateSlashed
-	PhragmenElection_SeatHolderSlashed []types2.EventElectionsSeatHolderSlashed
+	//PhragmenElection_Renounced         []types2.EventElectionsRenounced
+	//PhragmenElection_CandidateSlashed  []types2.EventElectionsCandidateSlashed
+	//PhragmenElection_SeatHolderSlashed []types2.EventElectionsSeatHolderSlashed
 
 	Gilt_BidPlaced    []BidPlaced
 	Gilt_BidRetracted []BidRetracted
