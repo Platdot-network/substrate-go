@@ -11,7 +11,6 @@ type ExtraEvents struct {
 
 type ExtraEventRecord struct {
 	// Fix some events
-	Balances_ReserveRepatriated []gsrpcTypes.EventBalancesReserveRepatriated
 	System_Remarked             []Remarked
 	Scheduler_Dispatched        []SchedulerDispatched
 	Scheduler_Scheduled         []SchedulerScheduled

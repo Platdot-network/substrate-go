@@ -16,14 +16,17 @@ type OriginEvents struct {
 
 type OriginEventRecord struct {
 	// refer origin
-	Claims_Claimed      []gsrpcTypes.EventClaimsClaimed      //nolint:stylecheck,golint
-	Balances_Endowed    []gsrpcTypes.EventBalancesEndowed    //nolint:stylecheck,golint
-	Balances_DustLost   []gsrpcTypes.EventBalancesDustLost   //nolint:stylecheck,golint
-	Balances_Transfer   []gsrpcTypes.EventBalancesTransfer   //nolint:stylecheck,golint
-	Balances_BalanceSet []gsrpcTypes.EventBalancesBalanceSet //nolint:stylecheck,golint
-	Balances_Deposit    []gsrpcTypes.EventBalancesDeposit    //nolint:stylecheck,golint
-	Balances_Reserved   []gsrpcTypes.EventBalancesReserved   //nolint:stylecheck,golint
-	Balances_Unreserved []gsrpcTypes.EventBalancesUnreserved //nolint:stylecheck,golint
+	Claims_Claimed              []gsrpcTypes.EventClaimsClaimed      //nolint:stylecheck,golint
+	Balances_Endowed            []gsrpcTypes.EventBalancesEndowed    //nolint:stylecheck,golint
+	Balances_DustLost           []gsrpcTypes.EventBalancesDustLost   //nolint:stylecheck,golint
+	Balances_Transfer           []gsrpcTypes.EventBalancesTransfer   //nolint:stylecheck,golint
+	Balances_BalanceSet         []gsrpcTypes.EventBalancesBalanceSet //nolint:stylecheck,golint
+	Balances_Reserved           []gsrpcTypes.EventBalancesReserved   //nolint:stylecheck,golint
+	Balances_Unreserved         []gsrpcTypes.EventBalancesUnreserved //nolint:stylecheck,golint
+	Balances_ReserveRepatriated []gsrpcTypes.EventBalancesReserveRepatriated
+	Balances_Deposit            []gsrpcTypes.EventBalancesDeposit //nolint:stylecheck,golint
+	Balances_Withdraw           []gsrpcTypes.EventBalancesWithdraw
+	Balances_Slashed            []gsrpcTypes.EventBalancesSlashed
 	//Balances_ReservedRepatriated                    []gsrpcTypes.EventBalancesReserveRepatriated             //nolint:stylecheck,golint
 	Grandpa_NewAuthorities             []gsrpcTypes.EventGrandpaNewAuthorities             //nolint:stylecheck,golint
 	Grandpa_Paused                     []gsrpcTypes.EventGrandpaPaused                     //nolint:stylecheck,golint
